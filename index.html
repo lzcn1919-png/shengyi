@@ -263,21 +263,21 @@ body{
   text-align:center;margin:0;
   box-shadow:0 2px 8px rgba(0,0,0,0.03);
 }
-.sopt label:hover{border-color:var(--rose);transform:translateY(-1px);}
-.sopt input:checked+label{
+.sopt .scard:hover{border-color:var(--rose);transform:translateY(-1px);}
+.sopt input:checked+.scard{
   border-color:var(--rose-dark);
   background:var(--rose-light);
   box-shadow:0 4px 16px rgba(201,144,138,0.15);
 }
-.sopt label .si{font-size:24px;}
-.sopt label .sn{font-size:13px;color:var(--ink);font-weight:500;}
-.sopt label .sd{font-size:11px;color:var(--ink-30);line-height:1.4;}
+.sopt .scard .si{font-size:24px;}
+.sopt .scard .sn{font-size:13px;color:var(--ink);font-weight:500;}
+.sopt .scard .sd{font-size:11px;color:var(--ink-30);line-height:1.4;}
 
 /* VOICE */
 .vgrid{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;}
 .vopt{position:relative;}
 .vopt input{position:absolute;opacity:0;width:0;height:0;}
-.vopt label{
+.vopt .vcard{
   display:flex;flex-direction:column;align-items:center;gap:5px;
   padding:14px 6px;
   background:var(--card);
@@ -288,9 +288,9 @@ body{
   text-align:center;margin:0;
   box-shadow:0 2px 8px rgba(0,0,0,0.03);
 }
-.vopt label .vi{font-size:20px;}
-.vopt label:hover{border-color:var(--rose);}
-.vopt input:checked+label{
+.vopt .vcard .vi{font-size:20px;}
+.vopt .vcard:hover{border-color:var(--rose);}
+.vopt input:checked+.vcard{
   border-color:var(--rose-dark);
   background:var(--rose-light);
 }
@@ -632,27 +632,27 @@ body{
     </div>
     <div class="sgrid">
       <div class="sopt"><input type="radio" name="style" value="温柔治愈" checked>
-        <label><span class="si">🌸</span><span class="sn">温柔治愈</span><span class="sd">轻柔 · 温暖 · 疗愈</span></label></label>
+        <label class="scard"><span class="si">🌸</span><span class="sn">温柔治愈</span><span class="sd">轻柔 · 温暖 · 疗愈</span></label></div>
       <div class="sopt"><input type="radio" name="style" value="甜蜜浪漫">
-        <label><span class="si">🍬</span><span class="sn">甜蜜浪漫</span><span class="sd">甜歌 · 可爱 · 撒糖</span></label></label>
+        <label class="scard"><span class="si">🍬</span><span class="sn">甜蜜浪漫</span><span class="sd">甜歌 · 可爱 · 撒糖</span></label></div>
       <div class="sopt"><input type="radio" name="style" value="深情伤感">
-        <label><span class="si">🌙</span><span class="sn">深情伤感</span><span class="sd">细腻 · 情绪 · 动人</span></label></label>
+        <label class="scard"><span class="si">🌙</span><span class="sn">深情伤感</span><span class="sd">细腻 · 情绪 · 动人</span></label></div>
       <div class="sopt"><input type="radio" name="style" value="民谣清新">
-        <label><span class="si">🎸</span><span class="sn">民谣清新</span><span class="sd">吉他 · 轻盈 · 故事</span></label></label>
+        <label class="scard"><span class="si">🎸</span><span class="sn">民谣清新</span><span class="sd">吉他 · 轻盈 · 故事</span></label></div>
       <div class="sopt"><input type="radio" name="style" value="婚礼庄重">
-        <label><span class="si">💒</span><span class="sn">婚礼庄重</span><span class="sd">宏大 · 感恩 · 仪式</span></label></label>
+        <label class="scard"><span class="si">💒</span><span class="sn">婚礼庄重</span><span class="sd">宏大 · 感恩 · 仪式</span></label></div>
       <div class="sopt"><input type="radio" name="style" value="活泼欢快">
-        <label><span class="si">✨</span><span class="sn">活泼欢快</span><span class="sd">轻快 · 青春 · 元气</span></label></label>
+        <label class="scard"><span class="si">✨</span><span class="sn">活泼欢快</span><span class="sd">轻快 · 青春 · 元气</span></label></div>
     </div>
     <div class="vgrid">
       <div class="vopt"><input type="radio" name="voice" value="温柔女声" checked>
-        <label><span class="vi">🎤</span>温柔女声</label></label>
+        <label class="vcard"><span class="vi">🎤</span>温柔女声</label></div>
       <div class="vopt"><input type="radio" name="voice" value="深情男声">
-        <label><span class="vi">🎵</span>深情男声</label></label>
+        <label class="vcard"><span class="vi">🎵</span>深情男声</label></div>
       <div class="vopt"><input type="radio" name="voice" value="男女对唱">
-        <label><span class="vi">🎶</span>男女对唱</label></label>
+        <label class="vcard"><span class="vi">🎶</span>男女对唱</label></div>
       <div class="vopt"><input type="radio" name="voice" value="不限声线">
-        <label><span class="vi">🌈</span>选最好的</label></label>
+        <label class="vcard"><span class="vi">🌈</span>选最好的</label></div>
     </div>
   </div>
 
