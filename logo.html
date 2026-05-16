@@ -2,235 +2,116 @@
 <html lang="zh-CN">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>会写歌的小森 · Logo</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+<title>会写歌的小森</title>
 <style>
   * { box-sizing: border-box; margin: 0; padding: 0; }
   body {
-    font-family: 'PingFang SC', 'Microsoft YaHei UI', 'Hiragino Sans GB', sans-serif;
-    background: #fdf8f4;
+    font-family: 'PingFang SC', 'Microsoft YaHei UI', sans-serif;
     min-height: 100vh;
+    background: linear-gradient(160deg, #fdf0ed 0%, #f5e4de 100%);
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    gap: 48px;
+    gap: 28px;
   }
 
-  .logo-wrap {
+  .logo-stage {
+    position: relative;
+    width: 460px;
+    height: 460px;
     display: flex;
-    flex-direction: column;
     align-items: center;
-    gap: 16px;
+    justify-content: center;
   }
+
+  .ring {
+    position: absolute;
+    border-radius: 50%;
+    border: 1.5px solid #c9908a;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    pointer-events: none;
+  }
+  .ring-1 { width: 430px; height: 430px; opacity: 0.3; }
+  .ring-2 { width: 460px; height: 460px; opacity: 0.15; }
 
   .logo-circle {
-    width: 180px;
-    height: 180px;
+    width: 400px;
+    height: 400px;
     border-radius: 50%;
-    overflow: hidden;
-    box-shadow: 0 8px 32px rgba(201,144,138,0.22), 0 2px 8px rgba(196,168,130,0.12);
-  }
-
-  .logo-text {
-    font-size: 17px;
-    letter-spacing: 0.12em;
-    color: #7a6058;
-    font-weight: 500;
-  }
-
-  /* Preview section */
-  .previews {
-    display: flex;
-    gap: 40px;
-    align-items: flex-end;
-  }
-
-  .preview-item {
+    background: #c9908a;
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 10px;
+    justify-content: center;
+    gap: 18px;
+    position: relative;
+    z-index: 1;
   }
 
-  .preview-label {
+  .logo-name {
+    font-family: STSong, 'SimSun', '宋体', serif;
+    font-size: 50px;
+    color: #ffffff;
+    letter-spacing: 4px;
+    line-height: 1;
+  }
+
+  .logo-notes {
+    font-size: 28px;
+    color: rgba(255, 255, 255, 0.55);
+    letter-spacing: 10px;
+    line-height: 1;
+  }
+
+  .logo-caption {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+  }
+
+  .caption-main {
+    font-family: STSong, 'SimSun', '宋体', serif;
+    font-size: 18px;
+    color: #2d2926;
+    letter-spacing: 3px;
+  }
+
+  .caption-sub {
     font-size: 12px;
-    color: #c0b9b2;
-    letter-spacing: 0.06em;
+    color: #b0a09a;
+    letter-spacing: 1.5px;
   }
 
-  .size-sm .logo-circle { width: 64px; height: 64px; }
-  .size-sm .logo-text { font-size: 11px; }
-
-  .size-md .logo-circle { width: 120px; height: 120px; }
-  .size-md .logo-text { font-size: 14px; }
-
-  .size-lg .logo-circle { width: 180px; height: 180px; }
-  .size-lg .logo-text { font-size: 17px; }
+  @media (max-width: 480px) {
+    .logo-stage { width: 320px; height: 320px; }
+    .logo-circle { width: 280px; height: 280px; }
+    .ring-1 { width: 300px; height: 300px; }
+    .ring-2 { width: 320px; height: 320px; }
+    .logo-name { font-size: 38px; }
+    .logo-notes { font-size: 22px; }
+  }
 </style>
 </head>
 <body>
 
-<div class="previews">
-  <div class="preview-item size-sm">
-    <div class="logo-wrap">
-      <div class="logo-circle">
-        <svg viewBox="0 0 180 180" xmlns="http://www.w3.org/2000/svg" width="100%" height="100%">
-          <defs>
-            <radialGradient id="bgGrad-sm" cx="50%" cy="45%" r="60%">
-              <stop offset="0%" stop-color="#f9e8e4"/>
-              <stop offset="100%" stop-color="#e8c4c0"/>
-            </radialGradient>
-          </defs>
-          <!-- Background -->
-          <circle cx="90" cy="90" r="90" fill="url(#bgGrad-sm)"/>
-          <!-- Hair back -->
-          <ellipse cx="90" cy="74" rx="38" ry="44" fill="#8b5e52"/>
-          <!-- Neck -->
-          <rect x="82" y="118" width="16" height="14" rx="6" fill="#f5d5c8"/>
-          <!-- Face -->
-          <ellipse cx="90" cy="96" rx="30" ry="33" fill="#fae0d4"/>
-          <!-- Hair top -->
-          <ellipse cx="90" cy="64" rx="38" ry="22" fill="#8b5e52"/>
-          <!-- Hair side left -->
-          <path d="M56 80 Q50 105 58 118 Q65 108 68 96 Z" fill="#8b5e52"/>
-          <!-- Hair side right -->
-          <path d="M124 80 Q130 105 122 118 Q115 108 112 96 Z" fill="#8b5e52"/>
-          <!-- Hair fringe -->
-          <path d="M62 72 Q68 58 90 56 Q112 58 118 72 Q108 66 90 67 Q72 66 62 72 Z" fill="#a07060"/>
-          <!-- Eyes -->
-          <ellipse cx="79" cy="93" rx="5" ry="5.5" fill="#3a2820"/>
-          <ellipse cx="101" cy="93" rx="5" ry="5.5" fill="#3a2820"/>
-          <!-- Eye shine -->
-          <circle cx="81" cy="91" r="1.5" fill="white"/>
-          <circle cx="103" cy="91" r="1.5" fill="white"/>
-          <!-- Eyelashes -->
-          <path d="M74 89 Q76 86 79 88" stroke="#3a2820" stroke-width="1.2" fill="none" stroke-linecap="round"/>
-          <path d="M106 89 Q104 86 101 88" stroke="#3a2820" stroke-width="1.2" fill="none" stroke-linecap="round"/>
-          <!-- Nose -->
-          <path d="M88 101 Q90 103 92 101" stroke="#d4917c" stroke-width="1.2" fill="none" stroke-linecap="round"/>
-          <!-- Mouth -->
-          <path d="M83 108 Q90 114 97 108" stroke="#c97a6a" stroke-width="1.8" fill="none" stroke-linecap="round"/>
-          <!-- Blush left -->
-          <ellipse cx="72" cy="103" rx="8" ry="5" fill="#f0a898" opacity="0.45"/>
-          <!-- Blush right -->
-          <ellipse cx="108" cy="103" rx="8" ry="5" fill="#f0a898" opacity="0.45"/>
-          <!-- Body / shoulders -->
-          <path d="M55 150 Q60 128 90 124 Q120 128 125 150 Q110 145 90 144 Q70 145 55 150 Z" fill="#e8c4c0"/>
-          <!-- Collar detail -->
-          <path d="M83 124 Q90 130 97 124" stroke="#c9908a" stroke-width="1.5" fill="none"/>
-          <!-- Music note left -->
-          <g transform="translate(30, 48)" opacity="0.6">
-            <text font-size="16" fill="#c9908a" font-family="serif">♪</text>
-          </g>
-          <!-- Music note right -->
-          <g transform="translate(128, 58)" opacity="0.5">
-            <text font-size="12" fill="#c4a882" font-family="serif">♫</text>
-          </g>
-          <!-- Sparkle top -->
-          <g transform="translate(108, 38)" opacity="0.55">
-            <line x1="0" y1="-7" x2="0" y2="7" stroke="#c4a882" stroke-width="1.2" stroke-linecap="round"/>
-            <line x1="-7" y1="0" x2="7" y2="0" stroke="#c4a882" stroke-width="1.2" stroke-linecap="round"/>
-            <line x1="-4" y1="-4" x2="4" y2="4" stroke="#c4a882" stroke-width="0.8" stroke-linecap="round"/>
-            <line x1="4" y1="-4" x2="-4" y2="4" stroke="#c4a882" stroke-width="0.8" stroke-linecap="round"/>
-          </g>
-        </svg>
-      </div>
-      <span class="logo-text">会写歌的小森</span>
+  <div class="logo-stage">
+    <div class="ring ring-1"></div>
+    <div class="ring ring-2"></div>
+    <div class="logo-circle">
+      <span class="logo-name">小森</span>
+      <span class="logo-notes">♪ ♫</span>
     </div>
-    <span class="preview-label">64px</span>
   </div>
 
-  <div class="preview-item size-md">
-    <div class="logo-wrap">
-      <div class="logo-circle">
-        <svg viewBox="0 0 180 180" xmlns="http://www.w3.org/2000/svg" width="100%" height="100%">
-          <defs>
-            <radialGradient id="bgGrad-md" cx="50%" cy="45%" r="60%">
-              <stop offset="0%" stop-color="#f9e8e4"/>
-              <stop offset="100%" stop-color="#e8c4c0"/>
-            </radialGradient>
-          </defs>
-          <circle cx="90" cy="90" r="90" fill="url(#bgGrad-md)"/>
-          <ellipse cx="90" cy="74" rx="38" ry="44" fill="#8b5e52"/>
-          <rect x="82" y="118" width="16" height="14" rx="6" fill="#f5d5c8"/>
-          <ellipse cx="90" cy="96" rx="30" ry="33" fill="#fae0d4"/>
-          <ellipse cx="90" cy="64" rx="38" ry="22" fill="#8b5e52"/>
-          <path d="M56 80 Q50 105 58 118 Q65 108 68 96 Z" fill="#8b5e52"/>
-          <path d="M124 80 Q130 105 122 118 Q115 108 112 96 Z" fill="#8b5e52"/>
-          <path d="M62 72 Q68 58 90 56 Q112 58 118 72 Q108 66 90 67 Q72 66 62 72 Z" fill="#a07060"/>
-          <ellipse cx="79" cy="93" rx="5" ry="5.5" fill="#3a2820"/>
-          <ellipse cx="101" cy="93" rx="5" ry="5.5" fill="#3a2820"/>
-          <circle cx="81" cy="91" r="1.5" fill="white"/>
-          <circle cx="103" cy="91" r="1.5" fill="white"/>
-          <path d="M74 89 Q76 86 79 88" stroke="#3a2820" stroke-width="1.2" fill="none" stroke-linecap="round"/>
-          <path d="M106 89 Q104 86 101 88" stroke="#3a2820" stroke-width="1.2" fill="none" stroke-linecap="round"/>
-          <path d="M88 101 Q90 103 92 101" stroke="#d4917c" stroke-width="1.2" fill="none" stroke-linecap="round"/>
-          <path d="M83 108 Q90 114 97 108" stroke="#c97a6a" stroke-width="1.8" fill="none" stroke-linecap="round"/>
-          <ellipse cx="72" cy="103" rx="8" ry="5" fill="#f0a898" opacity="0.45"/>
-          <ellipse cx="108" cy="103" rx="8" ry="5" fill="#f0a898" opacity="0.45"/>
-          <path d="M55 150 Q60 128 90 124 Q120 128 125 150 Q110 145 90 144 Q70 145 55 150 Z" fill="#e8c4c0"/>
-          <path d="M83 124 Q90 130 97 124" stroke="#c9908a" stroke-width="1.5" fill="none"/>
-          <g transform="translate(30, 48)" opacity="0.6"><text font-size="16" fill="#c9908a" font-family="serif">♪</text></g>
-          <g transform="translate(128, 58)" opacity="0.5"><text font-size="12" fill="#c4a882" font-family="serif">♫</text></g>
-          <g transform="translate(108, 38)" opacity="0.55">
-            <line x1="0" y1="-7" x2="0" y2="7" stroke="#c4a882" stroke-width="1.2" stroke-linecap="round"/>
-            <line x1="-7" y1="0" x2="7" y2="0" stroke="#c4a882" stroke-width="1.2" stroke-linecap="round"/>
-            <line x1="-4" y1="-4" x2="4" y2="4" stroke="#c4a882" stroke-width="0.8" stroke-linecap="round"/>
-            <line x1="4" y1="-4" x2="-4" y2="4" stroke="#c4a882" stroke-width="0.8" stroke-linecap="round"/>
-          </g>
-        </svg>
-      </div>
-      <span class="logo-text">会写歌的小森</span>
-    </div>
-    <span class="preview-label">120px</span>
+  <div class="logo-caption">
+    <span class="caption-main">会写歌的小森</span>
+    <span class="caption-sub">把你的故事做成一首歌</span>
   </div>
-
-  <div class="preview-item size-lg">
-    <div class="logo-wrap">
-      <div class="logo-circle">
-        <svg viewBox="0 0 180 180" xmlns="http://www.w3.org/2000/svg" width="100%" height="100%">
-          <defs>
-            <radialGradient id="bgGrad-lg" cx="50%" cy="45%" r="60%">
-              <stop offset="0%" stop-color="#f9e8e4"/>
-              <stop offset="100%" stop-color="#e8c4c0"/>
-            </radialGradient>
-          </defs>
-          <circle cx="90" cy="90" r="90" fill="url(#bgGrad-lg)"/>
-          <ellipse cx="90" cy="74" rx="38" ry="44" fill="#8b5e52"/>
-          <rect x="82" y="118" width="16" height="14" rx="6" fill="#f5d5c8"/>
-          <ellipse cx="90" cy="96" rx="30" ry="33" fill="#fae0d4"/>
-          <ellipse cx="90" cy="64" rx="38" ry="22" fill="#8b5e52"/>
-          <path d="M56 80 Q50 105 58 118 Q65 108 68 96 Z" fill="#8b5e52"/>
-          <path d="M124 80 Q130 105 122 118 Q115 108 112 96 Z" fill="#8b5e52"/>
-          <path d="M62 72 Q68 58 90 56 Q112 58 118 72 Q108 66 90 67 Q72 66 62 72 Z" fill="#a07060"/>
-          <ellipse cx="79" cy="93" rx="5" ry="5.5" fill="#3a2820"/>
-          <ellipse cx="101" cy="93" rx="5" ry="5.5" fill="#3a2820"/>
-          <circle cx="81" cy="91" r="1.5" fill="white"/>
-          <circle cx="103" cy="91" r="1.5" fill="white"/>
-          <path d="M74 89 Q76 86 79 88" stroke="#3a2820" stroke-width="1.2" fill="none" stroke-linecap="round"/>
-          <path d="M106 89 Q104 86 101 88" stroke="#3a2820" stroke-width="1.2" fill="none" stroke-linecap="round"/>
-          <path d="M88 101 Q90 103 92 101" stroke="#d4917c" stroke-width="1.2" fill="none" stroke-linecap="round"/>
-          <path d="M83 108 Q90 114 97 108" stroke="#c97a6a" stroke-width="1.8" fill="none" stroke-linecap="round"/>
-          <ellipse cx="72" cy="103" rx="8" ry="5" fill="#f0a898" opacity="0.45"/>
-          <ellipse cx="108" cy="103" rx="8" ry="5" fill="#f0a898" opacity="0.45"/>
-          <path d="M55 150 Q60 128 90 124 Q120 128 125 150 Q110 145 90 144 Q70 145 55 150 Z" fill="#e8c4c0"/>
-          <path d="M83 124 Q90 130 97 124" stroke="#c9908a" stroke-width="1.5" fill="none"/>
-          <g transform="translate(30, 48)" opacity="0.6"><text font-size="16" fill="#c9908a" font-family="serif">♪</text></g>
-          <g transform="translate(128, 58)" opacity="0.5"><text font-size="12" fill="#c4a882" font-family="serif">♫</text></g>
-          <g transform="translate(108, 38)" opacity="0.55">
-            <line x1="0" y1="-7" x2="0" y2="7" stroke="#c4a882" stroke-width="1.2" stroke-linecap="round"/>
-            <line x1="-7" y1="0" x2="7" y2="0" stroke="#c4a882" stroke-width="1.2" stroke-linecap="round"/>
-            <line x1="-4" y1="-4" x2="4" y2="4" stroke="#c4a882" stroke-width="0.8" stroke-linecap="round"/>
-            <line x1="4" y1="-4" x2="-4" y2="4" stroke="#c4a882" stroke-width="0.8" stroke-linecap="round"/>
-          </g>
-        </svg>
-      </div>
-      <span class="logo-text">会写歌的小森</span>
-    </div>
-    <span class="preview-label">180px</span>
-  </div>
-</div>
 
 </body>
 </html>
